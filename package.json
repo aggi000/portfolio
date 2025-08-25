@@ -1,0 +1,17 @@
+{
+  "name": "agrim_portfolio",
+  "version": "1.0.0",
+  "description": "A personal portfolio website built with Vue.js and Nuxt.js",
+  "author": "Agrim Sood",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "nuxt start"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.15.8",
+    "nuxt": "^4.0.3",
+    "vue": "^2.6.14"
+  }
+}

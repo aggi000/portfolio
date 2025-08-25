@@ -1,0 +1,174 @@
+/* ===== Facebook Dark Theme – Global ===== */
+:root {
+  --fb-blue: #1877f2;
+  --fb-dark: #18191a;
+  --fb-gray: #242526;
+  --fb-gray-2: #3a3b3c;
+  --fb-light: #e4e6eb;
+  --fb-accent: #42b72a;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--fb-dark);
+  color: var(--fb-light);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--fb-blue);
+  text-decoration: none;
+  transition: color 0.2s, opacity 0.2s;
+}
+a:hover { color: var(--fb-accent); }
+
+/* Shared container width for pages */
+.container,
+.hero,
+.about,
+.projects {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* ===== Header / Nav ===== */
+.site-header,
+.header {
+  background: var(--fb-gray) !important;
+  color: var(--fb-light) !important;
+  border-bottom: 1px solid var(--fb-gray-2) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.site-header .title { color: var(--fb-light) !important; }
+.site-header .tagline { color: rgba(228,230,235,0.75) !important; }
+
+.site-header .nav a,
+.site-header a {
+  color: var(--fb-light) !important;
+  opacity: 0.9;
+}
+.site-header .nav a:hover,
+.site-header a:hover {
+  color: var(--fb-blue) !important;
+  opacity: 1;
+}
+
+/* ===== Footer ===== */
+.footer,
+.site-footer {
+  background: var(--fb-gray) !important;
+  color: var(--fb-light) !important;
+  border-top: 1px solid var(--fb-gray-2) !important;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.footer a { color: var(--fb-blue) !important; }
+.footer a:hover { color: var(--fb-accent) !important; }
+
+/* ===== Buttons (global) ===== */
+.btn,
+.button,
+button {
+  background: var(--fb-blue);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(24,119,242,0.25);
+}
+.btn:hover,
+.button:hover,
+button:hover {
+  background: var(--fb-accent);
+  transform: translateY(-1px);
+}
+.btn:active,
+.button:active,
+button:active { transform: translateY(0); }
+
+/* Outline variant used on Home hero */
+.btn.outline {
+  background: transparent !important;
+  color: var(--fb-blue) !important;
+  border: 1px solid var(--fb-blue) !important;
+  box-shadow: none;
+}
+.btn.outline:hover {
+  color: var(--fb-accent) !important;
+  border-color: var(--fb-accent) !important;
+}
+
+/* ===== Cards / Sections (Projects, About) ===== */
+.card {
+  background: var(--fb-gray) !important;         /* override any light bg */
+  color: var(--fb-light) !important;
+  border: 1px solid var(--fb-gray-2) !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+.card .meta { color: rgba(228,230,235,0.7) !important; }
+.stack { color: var(--fb-light) !important; }
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--fb-light);
+  margin-top: 0;
+}
+h1 { font-size: 32px; }
+h2 { font-size: 22px; color: rgba(228,230,235,0.95); }
+h3 { font-size: 18px; color: rgba(228,230,235,0.9); }
+
+/* Lists in About/Experience */
+.about ul, .projects ul { padding-left: 1rem; }
+.about li, .projects li { line-height: 1.5; }
+
+/* Hero text spacing */
+.hero p { color: rgba(228,230,235,0.9); }
+
+/* Contact links in header */
+.contact a { color: var(--fb-light) !important; opacity: 0.9; }
+.contact a:hover { color: var(--fb-blue) !important; opacity: 1; }
+
+/* ===== Forms (if any) ===== */
+input, select, textarea {
+  background: var(--fb-gray);
+  color: var(--fb-light);
+  border: 1px solid var(--fb-gray-2);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+}
+
+/* ===== Utilities / Motion ===== */
+.fade-in { animation: fadeIn 0.6s ease; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Focus visibility */
+:focus-visible {
+  outline: 2px solid var(--fb-blue);
+  outline-offset: 2px;
+}
+
+/* Subtle dividers */
+hr {
+  border: none;
+  border-top: 1px solid var(--fb-gray-2);
+  margin: 24px 0;
+}
