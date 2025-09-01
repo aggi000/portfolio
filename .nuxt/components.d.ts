@@ -13,9 +13,17 @@ type HydrationStrategies = {
 type LazyComponent<T> = (T & DefineComponent<HydrationStrategies, {}, {}, {}, {}, {}, {}, { hydrated: () => void }>)
 interface _GlobalComponents {
       'AboutSection': typeof import("../components/AboutSection.vue")['default']
+    'CertificationSection': typeof import("../components/CertificationSection.vue")['default']
+    'ExperienceFlipCard': typeof import("../components/ExperienceFlipCard.vue")['default']
+    'ExperienceTimeline': typeof import("../components/ExperienceTimeline.vue")['default']
     'Footer': typeof import("../components/Footer.vue")['default']
     'Header': typeof import("../components/Header.vue")['default']
-    'ProjectsSection': typeof import("../components/ProjectsSection.vue")['default']
+    'ProjectFlipCard': typeof import("../components/ProjectFlipCard.vue")['default']
+    'ProjectGrid': typeof import("../components/ProjectGrid.vue")['default']
+    'SectionHeader': typeof import("../components/SectionHeader.vue")['default']
+    'SectionNav': typeof import("../components/SectionNav.vue")['default']
+    'SkillsSidebar': typeof import("../components/SkillsSidebar.vue")['default']
+    'StickyHero': typeof import("../components/StickyHero.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
     'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
     'NuxtErrorBoundary': typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -41,9 +49,17 @@ interface _GlobalComponents {
     'NuxtIsland': typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']
       'LazyAboutSection': LazyComponent<typeof import("../components/AboutSection.vue")['default']>
+    'LazyCertificationSection': LazyComponent<typeof import("../components/CertificationSection.vue")['default']>
+    'LazyExperienceFlipCard': LazyComponent<typeof import("../components/ExperienceFlipCard.vue")['default']>
+    'LazyExperienceTimeline': LazyComponent<typeof import("../components/ExperienceTimeline.vue")['default']>
     'LazyFooter': LazyComponent<typeof import("../components/Footer.vue")['default']>
     'LazyHeader': LazyComponent<typeof import("../components/Header.vue")['default']>
-    'LazyProjectsSection': LazyComponent<typeof import("../components/ProjectsSection.vue")['default']>
+    'LazyProjectFlipCard': LazyComponent<typeof import("../components/ProjectFlipCard.vue")['default']>
+    'LazyProjectGrid': LazyComponent<typeof import("../components/ProjectGrid.vue")['default']>
+    'LazySectionHeader': LazyComponent<typeof import("../components/SectionHeader.vue")['default']>
+    'LazySectionNav': LazyComponent<typeof import("../components/SectionNav.vue")['default']>
+    'LazySkillsSidebar': LazyComponent<typeof import("../components/SkillsSidebar.vue")['default']>
+    'LazyStickyHero': LazyComponent<typeof import("../components/StickyHero.vue")['default']>
     'LazyNuxtWelcome': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
     'LazyNuxtLayout': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
     'LazyNuxtErrorBoundary': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
@@ -75,9 +91,17 @@ declare module 'vue' {
 }
 
 export const AboutSection: typeof import("../components/AboutSection.vue")['default']
+export const CertificationSection: typeof import("../components/CertificationSection.vue")['default']
+export const ExperienceFlipCard: typeof import("../components/ExperienceFlipCard.vue")['default']
+export const ExperienceTimeline: typeof import("../components/ExperienceTimeline.vue")['default']
 export const Footer: typeof import("../components/Footer.vue")['default']
 export const Header: typeof import("../components/Header.vue")['default']
-export const ProjectsSection: typeof import("../components/ProjectsSection.vue")['default']
+export const ProjectFlipCard: typeof import("../components/ProjectFlipCard.vue")['default']
+export const ProjectGrid: typeof import("../components/ProjectGrid.vue")['default']
+export const SectionHeader: typeof import("../components/SectionHeader.vue")['default']
+export const SectionNav: typeof import("../components/SectionNav.vue")['default']
+export const SkillsSidebar: typeof import("../components/SkillsSidebar.vue")['default']
+export const StickyHero: typeof import("../components/StickyHero.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -103,9 +127,17 @@ export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']
 export const LazyAboutSection: LazyComponent<typeof import("../components/AboutSection.vue")['default']>
+export const LazyCertificationSection: LazyComponent<typeof import("../components/CertificationSection.vue")['default']>
+export const LazyExperienceFlipCard: LazyComponent<typeof import("../components/ExperienceFlipCard.vue")['default']>
+export const LazyExperienceTimeline: LazyComponent<typeof import("../components/ExperienceTimeline.vue")['default']>
 export const LazyFooter: LazyComponent<typeof import("../components/Footer.vue")['default']>
 export const LazyHeader: LazyComponent<typeof import("../components/Header.vue")['default']>
-export const LazyProjectsSection: LazyComponent<typeof import("../components/ProjectsSection.vue")['default']>
+export const LazyProjectFlipCard: LazyComponent<typeof import("../components/ProjectFlipCard.vue")['default']>
+export const LazyProjectGrid: LazyComponent<typeof import("../components/ProjectGrid.vue")['default']>
+export const LazySectionHeader: LazyComponent<typeof import("../components/SectionHeader.vue")['default']>
+export const LazySectionNav: LazyComponent<typeof import("../components/SectionNav.vue")['default']>
+export const LazySkillsSidebar: LazyComponent<typeof import("../components/SkillsSidebar.vue")['default']>
+export const LazyStickyHero: LazyComponent<typeof import("../components/StickyHero.vue")['default']>
 export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
 export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
 export const LazyNuxtErrorBoundary: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>

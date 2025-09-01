@@ -6,6 +6,7 @@
   --fb-gray-2: #3a3b3c;
   --fb-light: #e4e6eb;
   --fb-accent: #42b72a;
+  --header-h: 0px; /* Set this to your actual header height */
 }
 
 * { box-sizing: border-box; }
@@ -31,23 +32,19 @@ a {
 }
 a:hover { color: var(--fb-accent); }
 
-/* Shared container width for pages */
-.container,
-.hero,
-.about,
-.projects {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 24px 16px;
-}
-
 /* ===== Header / Nav ===== */
 .site-header,
 .header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
   background: var(--fb-gray) !important;
   color: var(--fb-light) !important;
   border-bottom: 1px solid var(--fb-gray-2) !important;
   box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  min-height: var(--header-h) !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 .site-header .title { color: var(--fb-light) !important; }
@@ -114,7 +111,7 @@ button:active { transform: translateY(0); }
 
 /* ===== Cards / Sections (Projects, About) ===== */
 .card {
-  background: var(--fb-gray) !important;         /* override any light bg */
+  background: var(--fb-gray) !important;
   color: var(--fb-light) !important;
   border: 1px solid var(--fb-gray-2) !important;
   border-radius: 12px !important;
@@ -171,4 +168,89 @@ hr {
   border: none;
   border-top: 1px solid var(--fb-gray-2);
   margin: 24px 0;
+}
+
+/* ===== FIXED GRID LAYOUT & SIDEBAR HEIGHTS ===== */
+@layer components {
+  /* Main grid layout */
+  .home .content-grid {
+    display: grid !important;
+    gap: 24px !important;
+    min-height: calc(100vh - var(--header-h)) !important;
+    align-items: stretch !important;
+  }
+
+  /* ≥900px: Main + Skills (2 columns) */
+  @media (min-width: 900px) {
+    .home .content-grid {
+      grid-template-columns: minmax(0, 3fr) minmax(220px, 1.2fr) !important;
+    }
+  }
+
+  /* ≥1100px: Left Nav + Main + Skills (3 columns) */
+  @media (min-width: 1100px) {
+    .home .content-grid {
+      grid-template-columns: 220px minmax(0, 1fr) 240px !important;
+    }
+    .home .sidebar-left { display: block !important; }
+  }
+
+  /* FIXED: Sidebars now properly fill viewport height */
+  .home .sidebar-left,
+  .home .sidebar-right {
+    position: sticky !important;
+    top: var(--header-h) !important;
+    height: calc(100vh - var(--header-h)) !important;
+    align-self: start !important;
+    min-width: 0 !important;
+    overflow: hidden !important; /* Prevent sidebar itself from scrolling */
+  }
+
+  /* Make sidebar content cards fill the full height */
+  .home .sidebar-left > *,
+  .home .sidebar-right > * {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Ensure scrollable content areas work properly */
+  .home .sidebar-right .skills-card .scroll,
+  .home .sidebar-left .toc .scroll,
+  .home .sidebar-right .skills-card > div:last-child,
+  .home .sidebar-left .toc > div:last-child {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* Fix main content area */
+  .home .content-grid > main { 
+    min-width: 0 !important;
+    display: flow-root !important;
+  }
+  
+  .home .hero,
+  .home .projects.section,
+  .home .about.section {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Prevent margin collapse affecting sticky positioning */
+  .home main > :first-child { margin-top: 0 !important; }
+
+  /* Smooth anchor scrolling with header offset */
+  .section { scroll-margin-top: calc(var(--header-h) + 16px) !important; }
+
+  /* Ensure Skills card header doesn't scroll away */
+  .home .sidebar-right .skills-card > h3,
+  .home .sidebar-left .toc > h3 {
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+  }
 }
