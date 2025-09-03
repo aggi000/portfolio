@@ -94,9 +94,51 @@ const hiddenCount = computed(() => Math.max(0, (props.item.tags?.length || 0) - 
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
 }
 
-.chips { display: flex; gap: 8px; flex-wrap: wrap; }
-.chip { font-size: 12px; }
-.chip.ghost { background: transparent; border-style: dashed; color: var(--text-2); }
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+  min-width: 0;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 10px;                    /* rounded rectangle */
+  background: rgba(255,255,255,0.06);     /* dark chip bg */
+  border: 1px solid rgba(255,255,255,0.14);
+  color: var(--fb-light);
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.35) inset;
+  transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+.chip::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--fb-blue);             /* tiny status dot */
+  opacity: .9;
+}
+
+.chip:hover {
+  border-color: var(--fb-blue);
+  box-shadow: 0 0 0 2px rgba(24,119,242,.16) inset;
+  background: rgba(255,255,255,0.08);
+}
+
+.chip.ghost {
+  background: transparent;
+  border-style: dashed;
+  color: rgba(228,230,235,.85);
+  box-shadow: none;
+}
 
 .details { margin-top: 8px; }
 .bullets { margin: 0; padding-left: 18px; display: grid; gap: 6px; color: var(--text-2); }

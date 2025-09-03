@@ -18,7 +18,7 @@ export default { name: 'Footer' }
 
 <style scoped>
 .footer {
-  margin-top: 40px;
+  margin-top: 0px;
   padding: 24px 16px;
   background: #f8f9fa;
   border-top: 1px solid #e5e7eb;

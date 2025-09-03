@@ -23,35 +23,46 @@ const openId = ref(null)
 function toggle(id){ openId.value = openId.value === id ? null : id }
 
 const items = [
-  {
+    {
     id: 1,
-    role:'Machine Learning Researcher',
-    company:'PCL Construction',
-    time:'2024',
-    location:'Edmonton, AB (Hybrid)',
-    type:'Contract',
-    summary:'Graph-based pattern detection across 10k+ engineering drawings.',
-    points:[
-      'Designed graph extraction & matching pipeline for CAD/engineering drawings',
-      'Built evaluation harness with synthetic & real datasets; automated reporting',
-      'Optimized matching routes for scale and stability; documented ops runbooks'
+    role: 'Machine Learning Researcher',
+    company: 'PCL Construction',
+    time: 'May 2025 - Aug 2025',
+    summary: 'Graph- and vision-based pattern detection on engineering drawings; shipped evaluation, data, and deployment tooling.',
+    points: [
+        'Led research on graph-based pattern detection across 10k+ drawings; benchmarked MLP, k-NN, GNNs, and Bayesian NNs with active learning, optimizing F2-score on spatially clustered text.',
+        'Built FCN-ResNet-50 / U-Net / YOLO pipeline for symbol segmentation & detection; recall at parity with non-vision baselines.',
+        'Generated high-precision training data using FCN instrument segmentation (pseudo-labels + synthetic crops), expanding datasets and boosting recognition accuracy on long-tail symbols.',
+        'Converted PDFs to graph objects (PyTorch) and iteratively refined labels; +25% tagging precision vs. baselines.',
+        'Packaged models into a Streamlit app backed by DuckDB; sub-second queries for enterprise deployment.',
+        'Refactored a 10k-line Python 3.11 codebase into plug-in modules; -40% onboarding time and faster CI/CD.',
+        'Automated PDF quantity take-off with span-aware text extraction and regex; ~80% reduction in manual effort.'
     ],
-    tags:['Computer Vision','Graph','Python','OpenCV']
-  },
+    tags: ['Computer Vision','Graph ML','PyTorch','FCN','U-Net','YOLO','Active Learning','DuckDB','Streamlit','CI/CD']
+    },
   {
     id: 2,
-    role:'Software Developer (Intern)',
+    role:'Software Developer',
     company:'Dotdash Meredith',
-    time:'2023',
+    time:'Sep 2023 - Apr 2025',
     location:'Remote',
     type:'Internship',
-    summary:'QA tooling & reliability dashboards to speed up shipping with confidence.',
-    points:[
-      'Expanded Playwright E2E coverage and stabilized flaky suites',
-      'Built CI health dashboard with actionable metrics and trend lines',
-      'Partnered with teams to triage failures and reduce MTTR'
+    summary:
+    'Built testing tools and a multi-page QA dashboard used across teams; owned backend/frontend, CI/CD, and data workflows to make shipping faster and more reliable.',
+    points: [
+        'Led end-to-end development of a company-wide, multi-page testing dashboard (HTML, Vue.js) with real-time results and better accessibility for QA engineers.',
+        'Engineered a Playwright-based testing framework in JavaScript, reducing manual testing time by ~30% and enabling scalable regression suites.',
+        'Streamlined data-cleaning with Python and Excel to deliver actionable QA insights and reduce debugging time.',
+        'Integrated AWS DocumentDB (MongoDB-compatible); maintained the dev DB, optimized queries, and applied migrations to support app development and deployment.',
+        'Deployed testing tools and dashboards via CI/CD pipelines, improving deployment efficiency and reliability.',
+        'Collaborated in Agile/Scrum—led ceremonies, refined backlog items, and used team metrics to guide development.',
+        'Drove design/code reviews to align standards, pre-empt bugs, and eliminate code smells.',
+        'Leveraged LLMs to accelerate debugging, code generation, and learning, improving developer throughput.'
     ],
-    tags:['Playwright','CI/CD','Node','Dashboards']
+    tags: [
+        'Vue.js','Playwright','JavaScript','Python',
+        'AWS DocumentDB','MongoDB','CI/CD','Agile','LLMs'
+    ]
   }
 ]
 </script>

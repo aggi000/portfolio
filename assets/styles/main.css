@@ -254,3 +254,168 @@ hr {
     margin: 0 !important;
   }
 }
+html[data-theme="light"] {
+  --fb-blue: #1877f2;
+  --fb-accent: #42b72a;
+
+  /* Light surfaces/text */
+  --fb-dark: #f0f2f5;    /* page background */
+  --fb-gray: #ffffff;    /* card / header background */
+  --fb-gray-2: #dadde1;  /* borders */
+  --fb-light: #111111;   /* primary text */
+
+  /* Optional: soften shadows slightly on light */
+  /* components that use box-shadows will already look lighter on white */
+}
+:root {
+  /* primary / secondary text colors */
+  --text-1: var(--fb-light);                 /* main text (light on dark) */
+  --text-2: rgba(228,230,235,.78);           /* muted text on dark */
+
+  /* strokes / subtle borders on dark */
+  --stroke-1: rgba(255,255,255,.14);
+  --stroke-2: rgba(255,255,255,.08);
+
+  /* chip bg on dark */
+  --chip-bg: rgba(255,255,255,.06);
+}
+
+/* ========= LIGHT THEME OVERRIDES ========= */
+html[data-theme="light"] {
+  /* your palette already flips via fb- vars; add text/border equivalents */
+  --text-1: #111111;                         /* main text (black) */
+  --text-2: #4a4f57;                         /* muted body text */
+  --stroke-1: rgba(17,17,17,.16);            /* borders on white */
+  --stroke-2: rgba(17,17,17,.08);
+  --chip-bg: rgba(0,0,0,.04);
+}
+
+/* ========= GLOBAL REMAPS ========= */
+/* use theme-safe tokens everywhere */
+body { color: var(--text-1) !important; }
+
+.site-header .tagline,
+.hero p,
+.card .meta,
+.summary,
+.sub,
+.muted { color: var(--text-2) !important; }
+
+/* inputs / selects on light need darker border */
+input, select, textarea {
+  border-color: var(--stroke-1) !important;
+}
+
+/* cards & common chrome should inherit tokenized borders (already ok on dark) */
+.card,
+.toc,
+.skills-card {
+  border-color: var(--stroke-1) !important;
+}
+
+/* ========= CHIPS / TAGS ========= */
+.chips { gap: 8px; flex-wrap: wrap; }
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: var(--chip-bg);
+  border: 1px solid var(--stroke-1);
+  color: var(--text-1);
+  font-size: 12px; line-height: 1;
+  box-shadow: 0 1px 0 rgba(0,0,0,.15) inset;
+}
+.chip::before {
+  content: ""; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--fb-blue); opacity: .9;
+}
+.chip.ghost {
+  background: transparent; border-style: dashed; color: var(--text-2);
+}
+
+/* ========= SKILLS SIDEBAR CLEANUP ========= */
+#skills .skills-card {
+  background: var(--fb-gray) !important;     /* white on light, dark on dark */
+  color: var(--text-1) !important;
+  border: 1px solid var(--stroke-1) !important;
+}
+#skills .skills-card .section-label,
+#skills .skills-card .pill,
+#skills .skills-card .meta { color: var(--text-2) !important; }
+
+/* ========= TIMELINE META ========= */
+.timeline .dot { box-shadow: 0 0 0 4px color-mix(in oklab, var(--fb-blue) 24%, transparent); }
+.item > * { min-width: 0; }  /* prevents shrink on long text */
+
+/* ========= HEADER/LINK CONTRAST ========= */
+.site-header a { color: var(--text-1) !important; opacity: .9; }
+.site-header a:hover { color: var(--fb-blue) !important; opacity: 1; }
+
+/* keep anchors readable in both themes */
+a { color: var(--fb-blue); }
+/* 1) Make sure global text uses theme tokens */
+body { color: var(--text-1) !important; }
+
+/* 2) Replace legacy hard-coded light grays with theme-muted color */
+.card .meta,
+.hero p,
+.summary,
+.sub,
+.muted,
+.tagline,
+.place,
+.time,
+.about li,
+.projects li {
+  color: var(--text-2) !important;
+}
+
+/* 3) Headings and strong text always use primary text color */
+h1, h2, h3, h4, h5, h6,
+strong, b, th {
+  color: var(--text-1) !important;
+}
+
+/* 4) Borders & dividers: use theme strokes so they show on white too */
+.card,
+.toc,
+.skills-card,
+hr,
+input, select, textarea {
+  border-color: var(--stroke-1) !important;
+}
+
+/* 5) Chips/tags & pills: readable in both themes */
+.chip,
+.pill {
+  color: var(--text-1) !important;
+  background: var(--chip-bg) !important;
+  border-color: var(--stroke-1) !important;
+}
+
+/* 6) Section header subtitles & small meta lines */
+.section .sub,
+.section .eyebrow,
+.section .meta,
+.section .description {
+  color: var(--text-2) !important;
+}
+
+/* 7) Skills sidebar fine-tuning */
+#skills .skills-card,
+#skills .skills-card .section-label,
+#skills .skills-card .meta,
+#skills .skills-card .pill {
+  color: var(--text-1) !important;
+}
+#skills .skills-card .section-label,
+#skills .skills-card .meta {
+  color: var(--text-2) !important; /* muted bits inside skills */
+}
+#skills .skills-card hr { border-color: var(--stroke-1) !important; }
+
+/* 8) Links remain brand-colored and legible in both themes */
+a { color: var(--fb-blue) !important; }
+a:hover { color: var(--fb-accent) !important; }
+:root { --blueprint-stroke: rgba(255,255,255,0.28); }       /* dark */
+html[data-theme="light"] { --blueprint-stroke: rgba(0,0,0,0.28); } /* light */

@@ -21,7 +21,7 @@
           <h3 class="title">{{ project.title }}</h3>
           <span class="year">{{ project.year }}</span>
         </header>
-        <p class="desc">{{ project.short }}</p>
+        <h4 class="desc">{{ project.short }}</h4>
         <div v-if="project.tags?.length" class="tags">
           <span v-for="(t, i) in project.tags" :key="i" class="tag">{{ t }}</span>
         </div>
@@ -83,11 +83,11 @@ function toggle() {
 </script>
 
 <style scoped>
-/* Uses your FB theme vars from assets/main.css */
+/* Theme-aware Project Flip Card */
 .card {
   background: var(--fb-gray);
-  border: 1px solid var(--fb-gray-2);
-  color: var(--fb-light);
+  border: 1px solid var(--stroke-1);
+  color: var(--text-1);
   border-radius: 14px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   cursor: pointer;
@@ -99,13 +99,8 @@ function toggle() {
   outline-offset: 0;
   min-height: 240px;
 }
-.card:hover {
-  box-shadow: 0 10px 26px rgba(0,0,0,0.35);
-  transform: translateY(-2px);
-}
-.card:focus-visible {
-  outline-color: var(--fb-blue);
-}
+.card:hover { box-shadow: 0 10px 26px rgba(0,0,0,0.35); transform: translateY(-2px); }
+.card:focus-visible { outline-color: var(--fb-blue); }
 
 /* Expanded highlight */
 .card.expanded {
@@ -122,88 +117,71 @@ function toggle() {
   transform-style: preserve-3d;
   transition: transform .6s cubic-bezier(.2,.6,.2,1);
 }
-.card.flipped .inner {
-  transform: rotateY(180deg) scale(1.02);
-}
+.card.flipped .inner { transform: rotateY(180deg) scale(1.02); }
 
 .face {
-  position: absolute;
-  inset: 0;
-  padding: 16px;
+  position: absolute; inset: 0; padding: 16px;
   backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: flex; flex-direction: column; gap: 10px;
 }
-.front {
-  /* front inherits bg */
-}
+
+/* FRONT uses card background; BACK uses a subtle variant that works in both themes */
+.front { /* inherits .card background */ }
 .back {
-  background: #1f2022; /* slightly darker for contrast */
+  /* Slightly different surface than the card, but theme-safe */
+  background: var(--fb-gray); /* fallback */
+  background: color-mix(in srgb, var(--fb-gray) 90%, #000 10%);
   border-radius: 14px;
   transform: rotateY(180deg);
+  border: 1px solid var(--stroke-1);
 }
 
+/* Head */
 .head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 10px;
+  display: flex; align-items: baseline; justify-content: space-between; gap: 10px;
 }
 .title {
-  margin: 0;
-  font-size: 18px;
-  color: var(--fb-light);
-  font-weight: 700;
+  margin: 0; font-size: 18px; color: var(--text-1); font-weight: 700;
 }
-.year {
-  color: rgba(228,230,235,0.7);
-  font-size: 12px;
-}
+.year { color: var(--text-2); font-size: 12px; }
 
-.desc {
-  color: rgba(228,230,235,0.9);
-}
+/* Body text */
+.desc { color: var(--text-2); }
+.detail { color: var(--text-1); }
 
+/* Lists */
+.bullets {
+  margin: 0; padding-left: 16px; display: grid; gap: 6px;
+}
+.bullets li { line-height: 1.4; color: var(--text-1); }
+
+/* “Tech:” line */
+.stack { margin-top: 6px; color: var(--text-1); }
+.tech { margin-left: 6px; color: var(--text-1); }
+
+/* Tags (rounded rectangles) */
 .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
 .tag {
-  background: var(--fb-gray-2);
-  border: 1px solid rgba(255,255,255,0.08);
-  color: var(--fb-light);
-  padding: 4px 10px;
-  border-radius: 999px;
+  background: var(--chip-bg);
+  border: 1px solid var(--stroke-1);
+  color: var(--text-1);
+  padding: 6px 10px;
+  border-radius: 10px;
   font-size: 12px;
+  line-height: 1;
+  display: inline-flex; align-items: center; gap: 6px;
+  box-shadow: 0 1px 0 rgba(0,0,0,.12) inset;
+}
+.tag::before {
+  content: ""; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--fb-blue); opacity: .9;
 }
 
-.hint {
-  margin-top: 6px;
-  color: rgba(228,230,235,0.6);
-  font-size: 12px;
-}
+/* Hint */
+.hint { margin-top: 6px; color: var(--text-2); font-size: 12px; }
 
-.detail { color: rgba(228,230,235,0.95); }
-
-.bullets {
-  margin: 0;
-  padding-left: 16px;
-  display: grid;
-  gap: 6px;
-}
-.bullets li { line-height: 1.4; }
-
-.stack {
-  margin-top: 6px;
-  color: rgba(228,230,235,0.95);
-}
-.tech { margin-left: 6px; color: var(--fb-light); }
-
-/* Links / buttons on back */
-.links {
-  margin-top: auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
+/* Buttons */
+.links { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px; }
 .btn {
   background: var(--fb-blue);
   color: #fff;
@@ -224,28 +202,19 @@ function toggle() {
   border: 1px solid var(--fb-blue);
   box-shadow: none;
 }
-.btn.outline:hover {
-  color: var(--fb-accent);
-  border-color: var(--fb-accent);
-}
+.btn.outline:hover { color: var(--fb-accent); border-color: var(--fb-accent); }
 
 .btn.ghost {
   background: transparent;
-  border: 1px solid var(--fb-gray-2);
-  color: var(--fb-light);
+  border: 1px solid var(--stroke-1);
+  color: var(--text-1);
   box-shadow: none;
 }
 .btn.ghost:hover { border-color: var(--fb-blue); color: var(--fb-blue); }
 
 /* Expansion sizing (makes the card/box grow) */
-.card.expanded {
-  min-height: 360px;
-}
+.card.expanded { min-height: 360px; }
 @media (min-width: 900px) {
-  /* When expanded, span more columns in the grid (see page grid rules) */
-  .card.expanded {
-    grid-column: 1 / -1;    /* occupy the full row (both columns) */
-    min-height: 420px;      /* give more room for details */
-    }
+  .card.expanded { grid-column: 1 / -1; min-height: 420px; }
 }
 </style>

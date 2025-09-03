@@ -84,13 +84,13 @@ function idFor(title) { return 'acc-' + title.toLowerCase().replace(/\s+/g, '-')
   background: var(--fb-gray);
   color: var(--fb-light);
   border: 1px solid var(--fb-gray-2);
-  border-radius: 16px;
+  border-radius: 0px;
   padding: 16px;
   box-shadow: 0 10px 28px rgba(0,0,0,0.28);
   overflow: hidden;
 }
 
-.head { display: grid; gap: 4px; margin-bottom: 10px; flex: 0 0 auto; }
+.head { display: grid; gap: 4px; margin-bottom: 0px; flex: 0 0 auto; }
 h2 { margin: 0; font-size: 18px; letter-spacing: .2px; color: var(--fb-light); }
 .muted { margin: 0; font-size: 12px; color: rgba(228,230,235,.7); }
 
@@ -104,7 +104,7 @@ h2 { margin: 0; font-size: 18px; letter-spacing: .2px; color: var(--fb-light); }
 }
 
 /* Pins */
-.pins { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.pins { display: flex; margin-top:12px;flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
 .pill {
   display: inline-flex; align-items: center; gap: 6px;
   padding: 6px 10px; border-radius: 999px;

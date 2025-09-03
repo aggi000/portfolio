@@ -54,6 +54,26 @@ import StickyHero from '~/components/StickyHero.vue'
 
 const originalProjects = [
   {
+  id: 5,
+  title: 'HSE Word Games',
+  year: '2025',
+  short:
+    'NYT-style word-games platform built in 48 hours: Next.js (TS) + FastAPI, Dockerized on Azure with LLM-generated puzzles.',
+  details:
+    'Built in a 2-day sprint for PCL (Team of 6). A Python/FastAPI service extracts and scores keywords from a PCL documents DB via an LLM pipeline and serves puzzle APIs; a TypeScript Next.js frontend renders playable games. Everything is containerized and deployed to Azure for demo-ready reliability.',
+  points: [
+    'Shipped a demo-ready MVP in 48 hours with a 6-person team.',
+    'Implemented LLM keyword-extraction with scoring & dedup to auto-generate daily puzzles.',
+    'Exposed clean REST endpoints; optimized latency via caching and payload trimming.',
+    'Set up CI/CD, container registry, app settings, and secrets on Azure.',
+    'Delivered stable demo with positive stakeholder feedback.'
+  ],
+  tech: 'Next.js (TypeScript), FastAPI (Python), Docker, Azure, LLM keyword extraction, Documents DB',
+  tags: ['Next.js','TypeScript','FastAPI','Python','Docker','Azure','LLM','CI/CD'],
+  link: '',   // optional live/demo URL
+  repo: ''    // optional GitHub URL
+},
+  {
     id: 1,
     title: 'Social Distribution',
     year: '2024',
