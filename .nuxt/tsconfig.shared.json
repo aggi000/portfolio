@@ -28,6 +28,9 @@
       "@nuxt/devtools": [
         "../node_modules/nuxt/node_modules/@nuxt/devtools"
       ],
+      "vue": [
+        "../node_modules/vue"
+      ],
       "@vue/runtime-core": [
         "../node_modules/@vue/runtime-core"
       ],
@@ -101,7 +104,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/dev"
+        "./manifest/meta/8af5a564-faad-480c-8a0f-5a6c135b942c.json"
       ],
       "#build": [
         "."

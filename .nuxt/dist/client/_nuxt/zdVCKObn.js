@@ -1,0 +1,1 @@
+import{A as c}from"./CM3xp78r.js";import{c as a,b as o,r as e,o as r}from"#entry";const s={class:"about page"},f={__name:"about",setup(_){return(p,m)=>{const t=e("header-component"),n=e("footer-component");return r(),a("div",s,[o(t),o(c),o(n)])}}};export{f as default};

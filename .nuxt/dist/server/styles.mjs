@@ -1,0 +1,27 @@
+const interopDefault = r => r.default || r || []
+export default {
+  "pages/index.vue": () => import('./_nuxt/index-styles.DX-zMX5M.mjs').then(interopDefault),
+  "pages/index.vue?vue&type=style&index=0&scoped=bdcc15c6&lang.css": () => import('./_nuxt/index-styles.jhQa1y4V.mjs').then(interopDefault),
+  "components/AboutSection.vue": () => import('./_nuxt/AboutSection-styles.CWQwEZmH.mjs').then(interopDefault),
+  "node_modules/nuxt/dist/app/components/error-404.vue": () => import('./_nuxt/error-404-styles.C_L_5G6H.mjs').then(interopDefault),
+  "components/AboutSection.vue?vue&type=style&index=0&scoped=ff59b2ee&lang.css": () => import('./_nuxt/AboutSection-styles.DLFQ1FhC.mjs').then(interopDefault),
+  "node_modules/nuxt/dist/app/components/error-500.vue": () => import('./_nuxt/error-500-styles.DedKE5EJ.mjs').then(interopDefault),
+  "components/ProjectFlipCard.vue": () => import('./_nuxt/ProjectFlipCard-styles.BfmZh_Jb.mjs').then(interopDefault),
+  "components/ExperienceTimeline.vue": () => import('./_nuxt/ExperienceTimeline-styles.ByGEmG-y.mjs').then(interopDefault),
+  "components/CertificationSection.vue": () => import('./_nuxt/CertificationSection-styles.BGCfjaap.mjs').then(interopDefault),
+  "components/SkillsSidebar.vue": () => import('./_nuxt/SkillsSidebar-styles.BHbK1TWH.mjs').then(interopDefault),
+  "components/StickyHero.vue": () => import('./_nuxt/StickyHero-styles.CknYGPJk.mjs').then(interopDefault),
+  "components/SectionNav.vue": () => import('./_nuxt/SectionNav-styles.DmvkvMO6.mjs').then(interopDefault),
+  "components/ProjectFlipCard.vue?vue&type=style&index=0&scoped=3d90e239&lang.css": () => import('./_nuxt/ProjectFlipCard-styles.DUgTtVOh.mjs').then(interopDefault),
+  "components/CertificationSection.vue?vue&type=style&index=0&scoped=bede65d1&lang.css": () => import('./_nuxt/CertificationSection-styles.CYOyodHL.mjs').then(interopDefault),
+  "components/SkillsSidebar.vue?vue&type=style&index=0&scoped=355b0e2f&lang.css": () => import('./_nuxt/SkillsSidebar-styles.BvQ-jO-Q.mjs').then(interopDefault),
+  "components/StickyHero.vue?vue&type=style&index=0&scoped=d318871f&lang.css": () => import('./_nuxt/StickyHero-styles.CfjYytPD.mjs').then(interopDefault),
+  "node_modules/nuxt/dist/app/components/error-404.vue?vue&type=style&index=0&scoped=b728498f&lang.css": () => import('./_nuxt/error-404-styles.DZnihAWO.mjs').then(interopDefault),
+  "node_modules/nuxt/dist/app/components/error-500.vue?vue&type=style&index=0&scoped=70d84538&lang.css": () => import('./_nuxt/error-500-styles.BoWwYdOn.mjs').then(interopDefault),
+  "components/ExperienceTimeline.vue?vue&type=style&index=0&scoped=d176dadf&lang.css": () => import('./_nuxt/ExperienceTimeline-styles.DtZAFLS5.mjs').then(interopDefault),
+  "components/SectionNav.vue?vue&type=style&index=0&scoped=1e2a7570&lang.css": () => import('./_nuxt/SectionNav-styles.C7WvcsPN.mjs').then(interopDefault),
+  "components/ExperienceFlipCard.vue": () => import('./_nuxt/ExperienceFlipCard-styles.CJSADvaH.mjs').then(interopDefault),
+  "components/ExperienceFlipCard.vue?vue&type=style&index=0&scoped=6cc9b174&lang.css": () => import('./_nuxt/ExperienceFlipCard-styles.DoSdKmTX.mjs').then(interopDefault),
+  "components/Footer.vue": () => import('./_nuxt/Footer-styles.C0n9YCom.mjs').then(interopDefault),
+  "components/Footer.vue?vue&type=style&index=0&scoped=b8220ad6&lang.css": () => import('./_nuxt/Footer-styles.BomlBhfw.mjs').then(interopDefault)
+}

@@ -1,0 +1,2 @@
+import style_0 from './StickyHero-styles-1.mjs-b8zM3Q5p.js';
+export default [style_0]

@@ -1,0 +1,5 @@
+const CertificationSection_vue_vue_type_style_index_0_scoped_bede65d1_lang = ".certs[data-v-bede65d1]{padding:10px}.grid[data-v-bede65d1]{display:grid;gap:14px;grid-template-columns:1fr}@media (min-width:900px){.grid[data-v-bede65d1]{grid-template-columns:repeat(2,minmax(0,1fr))}}.cert[data-v-bede65d1]{padding:var(--space-4)}.row[data-v-bede65d1]{align-items:center;gap:12px;grid-template-columns:auto 1fr auto}.badge[data-v-bede65d1],.row[data-v-bede65d1]{display:grid}.badge[data-v-bede65d1]{background:var(--surface-2);border:1px solid var(--stroke-1);border-radius:var(--r-sm);font-size:18px;height:36px;place-items:center;width:36px}.meta h3[data-v-bede65d1]{font-size:var(--h3);margin:0}.meta .sub[data-v-bede65d1]{color:var(--text-2);font-size:12px;margin:2px 0 0}.summary[data-v-bede65d1]{color:var(--text-2);margin:10px 0 6px}.chips[data-v-bede65d1]{display:flex;flex-wrap:wrap;gap:8px}.btn.small[data-v-bede65d1]{font-size:12px;padding:6px 10px}";
+export {
+  CertificationSection_vue_vue_type_style_index_0_scoped_bede65d1_lang as default
+};
+//# sourceMappingURL=CertificationSection-styles-1.mjs-BpR8akDs.js.map
