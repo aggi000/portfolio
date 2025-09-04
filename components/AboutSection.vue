@@ -16,6 +16,7 @@
 </template>
 
 <script setup>
+//No script needed
 </script>
 <style scoped>
 .about-points {
