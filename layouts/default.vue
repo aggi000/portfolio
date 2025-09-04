@@ -6,5 +6,4 @@
 </template>
 
 <script setup>
-// Header.vue / Footer.vue should be in /components
 </script>

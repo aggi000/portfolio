@@ -19,7 +19,6 @@ interface _GlobalComponents {
     'ExperienceFlipCard': typeof import("../components/ExperienceFlipCard.vue")['default']
     'ExperienceTimeline': typeof import("../components/ExperienceTimeline.vue")['default']
     'Footer': typeof import("../components/Footer.vue")['default']
-    'Header': typeof import("../components/Header.vue")['default']
     'ProjectFlipCard': typeof import("../components/ProjectFlipCard.vue")['default']
     'ProjectGrid': typeof import("../components/ProjectGrid.vue")['default']
     'SectionHeader': typeof import("../components/SectionHeader.vue")['default']
@@ -55,7 +54,6 @@ interface _GlobalComponents {
     'LazyExperienceFlipCard': LazyComponent<typeof import("../components/ExperienceFlipCard.vue")['default']>
     'LazyExperienceTimeline': LazyComponent<typeof import("../components/ExperienceTimeline.vue")['default']>
     'LazyFooter': LazyComponent<typeof import("../components/Footer.vue")['default']>
-    'LazyHeader': LazyComponent<typeof import("../components/Header.vue")['default']>
     'LazyProjectFlipCard': LazyComponent<typeof import("../components/ProjectFlipCard.vue")['default']>
     'LazyProjectGrid': LazyComponent<typeof import("../components/ProjectGrid.vue")['default']>
     'LazySectionHeader': LazyComponent<typeof import("../components/SectionHeader.vue")['default']>

@@ -136,7 +136,7 @@ const hiddenCount = computed(() => Math.max(0, (props.item.tags?.length || 0) - 
 .chip.ghost {
   background: transparent;
   border-style: dashed;
-  color: rgba(228,230,235,.85);
+  color: rgba(244, 246, 249, 0.85);
   box-shadow: none;
 }
 

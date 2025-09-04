@@ -19,7 +19,6 @@ export const CertificationSection: typeof import("../components/CertificationSec
 export const ExperienceFlipCard: typeof import("../components/ExperienceFlipCard.vue")['default']
 export const ExperienceTimeline: typeof import("../components/ExperienceTimeline.vue")['default']
 export const Footer: typeof import("../components/Footer.vue")['default']
-export const Header: typeof import("../components/Header.vue")['default']
 export const ProjectFlipCard: typeof import("../components/ProjectFlipCard.vue")['default']
 export const ProjectGrid: typeof import("../components/ProjectGrid.vue")['default']
 export const SectionHeader: typeof import("../components/SectionHeader.vue")['default']
@@ -55,7 +54,6 @@ export const LazyCertificationSection: LazyComponent<typeof import("../component
 export const LazyExperienceFlipCard: LazyComponent<typeof import("../components/ExperienceFlipCard.vue")['default']>
 export const LazyExperienceTimeline: LazyComponent<typeof import("../components/ExperienceTimeline.vue")['default']>
 export const LazyFooter: LazyComponent<typeof import("../components/Footer.vue")['default']>
-export const LazyHeader: LazyComponent<typeof import("../components/Header.vue")['default']>
 export const LazyProjectFlipCard: LazyComponent<typeof import("../components/ProjectFlipCard.vue")['default']>
 export const LazyProjectGrid: LazyComponent<typeof import("../components/ProjectGrid.vue")['default']>
 export const LazySectionHeader: LazyComponent<typeof import("../components/SectionHeader.vue")['default']>

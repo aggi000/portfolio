@@ -25,7 +25,8 @@
       <!-- RIGHT: headline + contacts -->
       <div class="copy">
         <h1 class="title">
-            Hi, I’m Agrim — <wbr> I build reliable <span class="nowrap">ML systems</span> & <span class="nowrap">software</span>.
+          <span>Hi, I’m Agrim.</span>
+          <span> I build reliable <span class="nowrap">ML systems</span> & <span class="nowrap">software</span>.</span>
         </h1>
         <p class="tagline">
             Reliable models, <span class="nowrap">useful tools</span>, and <span class="nowrap">code that lasts</span>.
