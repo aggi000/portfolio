@@ -51,7 +51,7 @@ import SectionNav from '~/components/SectionNav.vue'
 import CertificationSection from '~/components/CertificationSection.vue'
 import ExperienceTimeline from '~/components/ExperienceTimeline.vue'
 import StickyHero from '~/components/StickyHero.vue'
-
+//Hello world
 const originalProjects = [
   {
   id: 5,
