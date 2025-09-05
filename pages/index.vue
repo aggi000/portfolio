@@ -122,7 +122,7 @@ const originalProjects = [
     id: 4,
     title: 'SQL Movie Service',
     year: '2022',
-    short: 'SQLite-backed service to track watch behavior & run rec queries.',
+    short: 'SQLite-backed service to track watch behavior & run queries.',
     details:
       'Lightweight service to log watch events and compute recommendations with analytic SQL and window functions.',
     points: [
