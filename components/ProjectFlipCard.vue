@@ -93,20 +93,15 @@ function toggle() {
   cursor: pointer;
   perspective: 1600px;
   transform-origin: center center;
-  transition: box-shadow .25s, outline-color .2s, transform .2s;
+  transition: box-shadow .25s, transform .2s;
   position: relative;
-  outline: 2px solid transparent;
-  outline-offset: 0;
   min-height: 240px;
 }
-.card:hover { box-shadow: 0 10px 26px rgba(0,0,0,0.35); transform: translateY(-2px); }
-.card:focus-visible { outline-color: var(--fb-blue); }
+.card:hover { box-shadow: 0 12px 30px rgba(0,0,0,0.38); transform: translateY(-2px); }
+.card:focus-visible { outline: none; box-shadow: 0 18px 40px rgba(0,0,0,0.45); }
 
 /* Expanded highlight */
-.card.expanded {
-  box-shadow: 0 16px 40px rgba(24,119,242,0.35);
-  outline-color: var(--fb-blue);
-}
+.card.expanded { box-shadow: 0 22px 48px rgba(0,0,0,0.44); }
 
 /* Flip engine */
 .inner {
@@ -134,6 +129,8 @@ function toggle() {
   border-radius: 14px;
   transform: rotateY(180deg);
   border: 1px solid var(--stroke-1);
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 /* Head */

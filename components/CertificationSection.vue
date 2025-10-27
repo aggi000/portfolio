@@ -26,6 +26,9 @@
 <script setup>
 import SectionHeader from '~/components/SectionHeader.vue'
 const certs = [
+  { id:0, icon:'📊', title:'IBM Data Science Professional Certificate', issuer:'IBM / Coursera', when:'In progress',
+    summary:'Hands-on training in data analysis, visualization, and machine learning using Python.',
+    skills:['Data Analysis','Machine Learning'], verify:'' },
   { id:1, icon:'☁️', title:'AWS Cloud Practitioner Essentials', issuer:'Amazon Web Services', when:'2024',
     summary:'Foundational cloud, security/IAM, billing, and core services.', skills:['AWS','Security & IAM','Costing'], verify:'' },
   { id:2, icon:'📊', title:'Data Science & Statistics', issuer:'Udemy', when:'2021',

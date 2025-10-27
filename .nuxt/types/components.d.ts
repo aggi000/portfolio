@@ -25,6 +25,7 @@ interface _GlobalComponents {
     'SectionNav': typeof import("../components/SectionNav.vue")['default']
     'SkillsSidebar': typeof import("../components/SkillsSidebar.vue")['default']
     'StickyHero': typeof import("../components/StickyHero.vue")['default']
+    'VolunteerSection': typeof import("../components/VolunteerSection.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
     'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
     'NuxtErrorBoundary': typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -60,6 +61,7 @@ interface _GlobalComponents {
     'LazySectionNav': LazyComponent<typeof import("../components/SectionNav.vue")['default']>
     'LazySkillsSidebar': LazyComponent<typeof import("../components/SkillsSidebar.vue")['default']>
     'LazyStickyHero': LazyComponent<typeof import("../components/StickyHero.vue")['default']>
+    'LazyVolunteerSection': LazyComponent<typeof import("../components/VolunteerSection.vue")['default']>
     'LazyNuxtWelcome': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
     'LazyNuxtLayout': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
     'LazyNuxtErrorBoundary': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>

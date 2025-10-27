@@ -32,8 +32,10 @@
         <section id="certifications" class="certs section fade-in">
           <CertificationSection />
         </section>
+        <section id="volunteer" class="volunteers section fade-in">
+          <VolunteerSection />
+        </section>
       </main>
-
       <!-- RIGHT: skills sidebar (sticky, full-height) -->
       <aside id="skills" class="sidebar-right">
         <SkillsSidebar />
@@ -51,6 +53,7 @@ import SectionNav from '~/components/SectionNav.vue'
 import CertificationSection from '~/components/CertificationSection.vue'
 import ExperienceTimeline from '~/components/ExperienceTimeline.vue'
 import StickyHero from '~/components/StickyHero.vue'
+import VolunteerSection from '~/components/VolunteerSection.vue'
 //Hello world
 const originalProjects = [
   {
@@ -74,6 +77,21 @@ const originalProjects = [
   repo: ''    // optional GitHub URL
 },
   {
+    id: 0,
+    title: 'Document Insights',
+    year: '2025',
+    short: 'AI-powered document analysis system integrating extraction, storage, and review workflows.',
+    details:
+      'Developed a dual-service architecture combining a FastAPI-based ML extraction engine with a Java Spring Boot backend for document storage and analytics. Designed to automate data extraction from engineering drawings and invoices with structured summaries and confidence scoring.',
+    points: [
+      'FastAPI microservice for OCR and ML-driven field extraction',
+      'Spring Boot service for document persistence and RESTful endpoints',
+      'Dynamic dashboards and comparison tools for extracted field validation'
+    ],
+    tech: 'FastAPI, Spring Boot, PostgreSQL, AWS S3',
+    tags: ['Java','FastAPI', 'Spring Boot', 'PostgreSQL', 'Microservices','RESTful APIs']
+  },
+  {
     id: 1,
     title: 'Social Distribution',
     year: '2024',
@@ -85,8 +103,8 @@ const originalProjects = [
       'Private/public post visibility & access policies',
       'Real-time dashboards for moderation and system health'
     ],
-    tech: 'Vue.js, REST APIs, MongoDB',
-    tags: ['Vue', 'REST', 'MongoDB']
+    tech: 'Vue.js, RESTful APIs, MongoDB, Python, Django',
+    tags: ['Vue', 'REST', 'MongoDB', 'Python', 'Django']
   },
   {
     id: 2,
@@ -100,8 +118,8 @@ const originalProjects = [
       'k-means / cosine similarity comparisons',
       'Interactive charts for cluster exploration'
     ],
-    tech: 'Python, Spotipy, scikit-learn',
-    tags: ['Python', 'ML', 'Spotify']
+    tech: 'Python, Pandas, scikit-learn, Matplotlib, Seaborn',
+    tags: ['Python', 'scikit-learn', 'Data Cleaning', 'Data Visualization']
   },
   {
     id: 3,
@@ -115,8 +133,8 @@ const originalProjects = [
       'Barcode/QR for quick pantry updates',
       'JUnit/UI tests for flows & edge cases'
     ],
-    tech: 'Java (Android), Firebase, JUnit',
-    tags: ['Android', 'Firebase', 'Testing']
+    tech: 'Java (Android), Firebase, JUnit, Android Studio, SQL',
+    tags: ['Android', 'Firebase', 'Database', 'Java']
   },
   {
     id: 4,
@@ -130,8 +148,8 @@ const originalProjects = [
       'Materialized views for top-k recommendations',
       'CLI & minimal UI for exploration'
     ],
-    tech: 'Python, SQLite',
-    tags: ['SQLite', 'Python', 'Analytics']
+    tech: 'Python, SQLite, TKinter',
+    tags: ['SQLite', 'Python']
   }
 ]
 
